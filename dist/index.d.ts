@@ -1,17 +1,13 @@
-import { FrostedContextParams } from "./Context";
-import { useFrostedEffect, useFrostAfterEffect } from "./hook";
-declare function withFrost({ blurSize }: FrostedContextParams): {
+export { FrostedContext } from "./Context";
+export type { FrostedContextParams } from "./Context";
+export { FrostedDiv } from "./Div";
+export type { FrostedLabel } from "./Label";
+export type { FrostedSpan } from "./Span";
+export { useFrostedEffect, useFrostAfterEffect } from "./hook";
+export declare function withFrost({ blurSize }: {
+    blurSize: string;
+}): {
     style: {
         filter: string;
     };
 };
-declare const _default: {
-    FrostedContext: any;
-    FrostedDiv: any;
-    FrostedLabel: any;
-    FrostedSpan: any;
-    withFrost: typeof withFrost;
-    useFrostedEffect: typeof useFrostedEffect;
-    useFrostAfterEffect: typeof useFrostAfterEffect;
-};
-export default _default;

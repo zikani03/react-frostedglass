@@ -1,54 +1,41 @@
-import { createContext as d, useContext as s, createRef as m, useState as i, useEffect as b } from "react";
-const c = d({
+import { createContext as i, useContext as f, createRef as a, useState as l, useEffect as d } from "react";
+const m = i({
   blurSize: "0.3em"
   // default blur size is 0.3em
 });
-function F(e) {
-  const t = s(c);
+function I(e) {
+  const t = f(m);
   return /* @__PURE__ */ React.createElement("div", { ...e, style: { filter: `blur(${t.blurSize})` } }, e.children);
 }
-function x(e) {
-  const t = s(c);
-  return /* @__PURE__ */ React.createElement("label", { ...e, style: { filter: `blur(${t.blurSize})` } }, e.children);
+function b(e, t = "0.3em") {
+  let r = a(!1);
+  const n = t, [s, u] = l("0em");
+  return v(e, n, u, r), [s, r];
 }
-function S(e) {
-  const t = s(c);
-  return /* @__PURE__ */ React.createElement("span", { ...e, style: { filter: `blur(${t.blurSize})` } }, e.children);
-}
-function v(e, t = "0.3em") {
-  let r = m(!1);
-  const n = t, [l, u] = i("0em");
-  return o(e, n, u, r), [l, r];
-}
-function o(e, t, r, n) {
-  const [l, u] = i(null);
-  let a = () => {
+function v(e, t, r, n) {
+  const [s, u] = l(null);
+  let c = () => {
     document.hasFocus() ? (r("0em"), n.current = !1) : (r(t), n.current = !0);
   };
-  b(() => {
-    if (!l) {
-      let f = setInterval(a, e);
-      u(f);
+  d(() => {
+    if (!s) {
+      let o = setInterval(c, e);
+      u(o);
     }
-    return clearInterval(l);
+    return clearInterval(s);
   }, []);
 }
-function z({ blurSize: e }) {
+function x({ blurSize: e }) {
   return { ...Object.assign({}, {
     style: {
       filter: `blur(${e})`
     }
   }) };
 }
-const I = {
-  FrostedContext: c,
-  FrostedDiv: F,
-  FrostedLabel: x,
-  FrostedSpan: S,
-  withFrost: z,
-  useFrostedEffect: v,
-  useFrostAfterEffect: o
-};
 export {
-  I as default
+  m as FrostedContext,
+  I as FrostedDiv,
+  v as useFrostAfterEffect,
+  b as useFrostedEffect,
+  x as withFrost
 };

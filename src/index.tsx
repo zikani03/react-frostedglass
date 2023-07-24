@@ -1,11 +1,12 @@
 // react-frostedglass
-import {FrostedContext, FrostedContextParams} from "./Context"
-import FrostedDiv from "./Div";
-import FrostedLabel from "./Label";
-import FrostedSpan from "./Span";
-import { useFrostedEffect, useFrostAfterEffect } from "./hook";
+export {FrostedContext} from "./Context"
+export type {FrostedContextParams} from "./Context"
+export { FrostedDiv } from "./Div";
+export type { FrostedLabel } from "./Label";
+export type { FrostedSpan } from "./Span";
+export { useFrostedEffect, useFrostAfterEffect } from "./hook";
 
-function withFrost({ blurSize }: FrostedContextParams) {
+export function withFrost({ blurSize }: { blurSize: string }) {
     let mergedProps = Object.assign({}, {
         style: {
             filter: `blur(${blurSize})`
@@ -13,14 +14,4 @@ function withFrost({ blurSize }: FrostedContextParams) {
     })
 
     return {...mergedProps}
-}
-
-export default {
-    FrostedContext,
-    FrostedDiv,
-    FrostedLabel,
-    FrostedSpan,
-    withFrost,
-    useFrostedEffect,
-    useFrostAfterEffect
 }
