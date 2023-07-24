@@ -4,8 +4,9 @@ import {FrostedContextParams} from "./Context"
 import FrostedDiv from "./Div";
 import FrostedLabel from "./Label";
 import FrostedSpan from "./Span";
+import { useFrostedEffect, useFrostAfterEffect } from "./hook";
 
-export function withFrost({ blurSize }: FrostedContextParams) {
+function withFrost({ blurSize }: FrostedContextParams) {
     let mergedProps = Object.assign({}, {
         style: {
             filter: `blur(${blurSize})`
@@ -20,5 +21,7 @@ export default {
     FrostedDiv,
     FrostedLabel,
     FrostedSpan,
-    withFrost
+    withFrost,
+    useFrostedEffect,
+    useFrostAfterEffect
 }

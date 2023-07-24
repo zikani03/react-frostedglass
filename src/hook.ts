@@ -12,7 +12,7 @@ export function useFrostedEffect(intervalMs, blurSize = '0.3em') {
 export function useFrostAfterEffect(intervalMs, targetBlurSize, setBlurState, isBlurredRef) {
     const [intervalID, setIntervalID] = useState(null)
 
-    let frostedIntervalFunc = (event) => {
+    let frostedIntervalFunc = () => {
         if (!document.hasFocus()) {
             setBlurState(targetBlurSize);
             // debug: console.log('frosted: we DONT have focus')

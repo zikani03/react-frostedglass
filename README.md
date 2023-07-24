@@ -18,11 +18,11 @@ _Imagine the user of your app suddenly turns from their desk and is now chatting
 First step is to add a context provider to wrap your components so that standard config can be shared across child nodes:
 
 ```jsx
-import {FrostedContext} '@zikani03/react-frostedglass'
+import {FrostedContext, useFrostedEffect} '@zikani03/react-frostedglass'
 
 function App() {
     const focusCheckInterval = 10_000;
-    const [blurSize, isFrosted] = useFrostEffect(focusCheckInterval, '0.3em')
+    const [blurSize, isFrosted] = useFrostedEffect(focusCheckInterval, '0.3em')
 
     return (
         <FrostedContext.Provider value={{ blurSize: blurSize}}>
