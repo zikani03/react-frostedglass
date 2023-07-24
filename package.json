@@ -1,0 +1,65 @@
+{
+  "name": "@zikani03/react-frostedglass",
+  "version": "0.0.1",
+  "private": false,
+  "description": "React Frostedglass library for blurring things",
+  "type": "module",
+  "main": "dist/@zikani03/react-frostedglass.umd.cjs",
+  "module": "dist/@zikani03/react-frostedglass.js",
+  "exports": {
+    ".": {
+      "import": "./dist/@zikani03/react-frostedglass.js",
+      "require": "./dist/@zikani03/react-frostedglass.umd.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run",
+    "test:interactive": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "run-s lint:eslint lint:typescript",
+    "lint:eslint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:typescript": "tsc --noEmit true --emitDeclarationOnly false"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "frosted",
+    "glass",
+    "blurring",
+    "hide",
+    "sensitive",
+    "info"
+  ],
+  "author": "Zikani Nyirenda Mwase <zikani.nmwase@ymail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.0",
+    "react": "^18.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^3.2.0",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  }
+}
