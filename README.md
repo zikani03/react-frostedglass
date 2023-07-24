@@ -18,7 +18,7 @@ _Imagine the user of your app suddenly turns from their desk and is now chatting
 First step is to add a context provider to wrap your components so that standard config can be shared across child nodes:
 
 ```jsx
-import FrostedContext 'react-frostedglass/Label'
+import {FrostedContext} '@zikani03/react-frostedglass'
 
 function App() {
     const focusCheckInterval = 10_000;
@@ -36,7 +36,7 @@ function App() {
 Second step is to use one of the built in "Frosted" versions of some DOM elements, currently only `div` via `FrostedDiv`, `label` via `FrostedLabel`, `span` via `FrostedSpan`.  Incase you want to apply the frost effect on a an element that's not built in you can use the `withFrost()` function
 
 ```jsx
-import FrostedSpan 'react-frostedglass/Span'
+import {FrostedSpan, FrostedDiv, FrostedLabel} '@zikani03/react-frostedglass'
 
 function Account() {
     const user = {
