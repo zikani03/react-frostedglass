@@ -20,7 +20,7 @@ export default defineConfig((env) => ({
             external: [...Object.keys(packageJson.peerDependencies)],
             output: {
                 globals: {
-                    react: 'react'
+                    react: 'React'
                 }
             }
         },

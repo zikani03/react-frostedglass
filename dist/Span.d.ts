@@ -1,3 +1,3 @@
-/// <reference types="react" />
-export declare function FrostedSpan(props: any): import("react").JSX.Element;
+import React from "react";
+export declare function FrostedSpan(props: any): React.JSX.Element;
 export default FrostedSpan;
