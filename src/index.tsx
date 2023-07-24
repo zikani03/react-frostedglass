@@ -1,6 +1,5 @@
 // react-frostedglass
-import FrostedContext from "./Context"
-import {FrostedContextParams} from "./Context"
+import {FrostedContext, FrostedContextParams} from "./Context"
 import FrostedDiv from "./Div";
 import FrostedLabel from "./Label";
 import FrostedSpan from "./Span";

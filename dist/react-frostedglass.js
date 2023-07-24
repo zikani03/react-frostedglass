@@ -1,5 +1,5 @@
 import { createContext as d, useContext as s, createRef as m, useState as i, useEffect as b } from "react";
-let c = d({
+const c = d({
   blurSize: "0.3em"
   // default blur size is 0.3em
 });

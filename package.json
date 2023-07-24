@@ -1,15 +1,15 @@
 {
   "name": "@zikani03/react-frostedglass",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "React Frostedglass library for blurring things",
   "type": "module",
-  "main": "dist/@zikani03/react-frostedglass.umd.cjs",
-  "module": "dist/@zikani03/react-frostedglass.js",
+  "main": "dist/react-frostedglass.umd.cjs",
+  "module": "dist/react-frostedglass.js",
   "exports": {
     ".": {
-      "import": "./dist/@zikani03/react-frostedglass.js",
-      "require": "./dist/@zikani03/react-frostedglass.umd.cjs"
+      "import": "./dist/react-frostedglass.js",
+      "require": "./dist/react-frostedglass.umd.cjs"
     }
   },
   "files": [

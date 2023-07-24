@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import FrostedContext from "./Context"
+import {FrostedContext} from "./Context"
 
 export function FrostedDiv(props) {
     const ctx = useContext(FrostedContext)
