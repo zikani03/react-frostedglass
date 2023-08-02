@@ -1,7 +1,7 @@
-import { useEffect, useState, createRef } from "react";
+import { useLayoutEffect, useState, useRef, MutableRefObject, SetStateAction, Dispatch} from "react";
 
-export function useFrostedEffect(intervalMs, blurSize = '0.3em') {
-    let isBlurredRef = createRef(false)
+export function useFrostedEffect(intervalMs: number, blurSize: string = '0.3em') {
+    let isBlurredRef: MutableRefObject<boolean> = useRef(false)
     const targetBlurSize = blurSize;
     const [currentBlurSize, setCurrentBlurSize] = useState('0em');
     useFrostAfterEffect(intervalMs, targetBlurSize, setCurrentBlurSize, isBlurredRef);
@@ -9,8 +9,8 @@ export function useFrostedEffect(intervalMs, blurSize = '0.3em') {
     return [currentBlurSize, isBlurredRef]
 }
 
-export function useFrostAfterEffect(intervalMs, targetBlurSize, setBlurState, isBlurredRef) {
-    const [intervalID, setIntervalID] = useState(null)
+export function useFrostAfterEffect(intervalMs: number, targetBlurSize: string, setBlurState: Dispatch<SetStateAction<string>>, isBlurredRef: MutableRefObject<Boolean>) {
+    const [intervalID, setIntervalID] = useState<number|any>(null)
 
     let frostedIntervalFunc = () => {
         if (!document.hasFocus()) {
@@ -24,7 +24,7 @@ export function useFrostAfterEffect(intervalMs, targetBlurSize, setBlurState, is
         }
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!intervalID) {
             let id = setInterval(frostedIntervalFunc, intervalMs);
             setIntervalID(id);
